@@ -4,8 +4,16 @@ class PostsController < ApplicationController
   end
   
   def new
-    
+
     render :new
   end
+
+  def create
+    Post.create(title: params[:post][:title], description: params[:post][:description])
+    redirect_to posts_path
+
+    # render :create
+  end
+
 
 end

@@ -1,1 +1,11 @@
-New!
+<form action= "<%= posts_path %>">
+    <label>Post title:</label><br>
+    <input type="text" id-"post_title" name="post[title]"><br>
+
+    <label>Post description:</label><br>
+    <textarea id="post_description" name="post[description]"></textarea><br>
+
+    <input type="submit" value="Submit Post">
+</form>
+
+<%= params.inspect %>
